@@ -20,7 +20,6 @@ runs:
 
     # Step 2: 缓存 depot_tools
     - name: Cache depot_tools
-      shell: bash
       uses: actions/cache@v3
       with:
         path: $HOME/depot_tools
