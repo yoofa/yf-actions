@@ -23,7 +23,7 @@ runs:
       uses: actions/cache@v3
       with:
         path: $HOME/depot_tools
-        key: ${{ runner.os }}-depot_tools-${{ hashFiles('actions/base-test-build-action/install-deps.sh') }}
+        key: ${{ runner.os }}-depot_tools-${{ hashFiles('base-test-build-action/install-deps.sh') }}
         restore-keys: |
           ${{ runner.os }}-depot_tools-
 
@@ -31,8 +31,9 @@ runs:
     - name: Install dependencies
       shell: bash
       run: |
-        chmod +x ./install-deps.sh
-        ./install-deps.sh
+        ls
+        chmod +x base-test-build-action/install-deps.sh
+        ./base-test-build-action/install-deps.sh
 
     # Step 4: 将 depot_tools 添加到 PATH
     - name: Add depot_tools to PATH
