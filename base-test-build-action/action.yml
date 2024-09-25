@@ -10,7 +10,6 @@ runs:
   steps:
     # Step 0: check code
     - name: CheckOut code
-      shell: bash
       uses: actions/checkout@v3
       with:
         repository: yoofa/yf-actions
