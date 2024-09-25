@@ -8,6 +8,14 @@ inputs:
 runs:
   using: "composite"
   steps:
+    # Step 0: check code
+    - name: CheckOut code
+      shell: bash
+      uses: actions/checkout@v3
+      with:
+        repository: yoofa/yf-actions
+        ref: main  # or the specific branch/tag you want
+    
     # Step 1: 设置 SSH（如果提供了 SSH_PRIVATE_KEY）
     - name: Set up SSH
       shell: bash
